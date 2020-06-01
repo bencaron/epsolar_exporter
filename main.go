@@ -10,11 +10,6 @@ import (
 )
 
 func init() {
-	// Metrics have to be registered to be exposed:
-	/*	prometheus.MustRegister(panelVoltage)
-		prometheus.MustRegister(panelCurrent)
-		prometheus.MustRegister(panelPower)
-	*/
 	prometheus.MustRegister(newSolarCollector())
 }
 
