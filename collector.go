@@ -239,49 +239,49 @@ func (c *solarCollector) collect(ch chan<- prometheus.Metric) error {
 	// Panel array
 	ch <- prometheus.MustNewConstMetric(
 		c.panelVoltage,
-		prometheus.CounterValue,
+		prometheus.GaugeValue,
 		float64(tracer.ArrayVoltage),
 	)
 	ch <- prometheus.MustNewConstMetric(
 		c.panelCurrent,
-		prometheus.CounterValue,
+		prometheus.GaugeValue,
 		float64(tracer.ArrayCurrent),
 	)
 	ch <- prometheus.MustNewConstMetric(
 		c.panelPower,
-		prometheus.CounterValue,
+		prometheus.GaugeValue,
 		float64(tracer.ArrayPower),
 	)
 
 	// Batteries
 	ch <- prometheus.MustNewConstMetric(
 		c.batteryCurrent,
-		prometheus.CounterValue,
+		prometheus.GaugeValue,
 		float64(tracer.BatteryCurrent),
 	)
 	ch <- prometheus.MustNewConstMetric(
 		c.batteryVoltage,
-		prometheus.CounterValue,
+		prometheus.GaugeValue,
 		float64(tracer.BatteryVoltage),
 	)
 	ch <- prometheus.MustNewConstMetric(
 		c.batterySOC,
-		prometheus.CounterValue,
+		prometheus.GaugeValue,
 		float64(tracer.BatterySOC),
 	)
 	ch <- prometheus.MustNewConstMetric(
 		c.batteryTemp,
-		prometheus.CounterValue,
+		prometheus.GaugeValue,
 		float64(tracer.BatteryTemp),
 	)
 	ch <- prometheus.MustNewConstMetric(
 		c.batteryMinVoltage,
-		prometheus.CounterValue,
+		prometheus.GaugeValue,
 		float64(tracer.BatteryMinVoltage),
 	)
 	ch <- prometheus.MustNewConstMetric(
 		c.batteryMaxVoltage,
-		prometheus.CounterValue,
+		prometheus.GaugeValue,
 		float64(tracer.BatteryMaxVoltage),
 	)
 
@@ -291,72 +291,72 @@ func (c *solarCollector) collect(ch chan<- prometheus.Metric) error {
 	}
 	ch <- prometheus.MustNewConstMetric(
 		c.loadActive,
-		prometheus.CounterValue,
+		prometheus.GaugeValue,
 		loadIsActive,
 	)
 	ch <- prometheus.MustNewConstMetric(
 		c.loadVoltage,
-		prometheus.CounterValue,
+		prometheus.GaugeValue,
 		float64(tracer.LoadVoltage),
 	)
 	ch <- prometheus.MustNewConstMetric(
 		c.loadCurrent,
-		prometheus.CounterValue,
+		prometheus.GaugeValue,
 		float64(tracer.LoadCurrent),
 	)
 	ch <- prometheus.MustNewConstMetric(
 		c.loadPower,
-		prometheus.CounterValue,
+		prometheus.GaugeValue,
 		float64(tracer.LoadPower),
 	)
 
 	// controller infos
 	ch <- prometheus.MustNewConstMetric(
 		c.deviceTemp,
-		prometheus.CounterValue,
+		prometheus.GaugeValue,
 		float64(tracer.DeviceTemp),
 	)
 
 	// energy consumed
 	ch <- prometheus.MustNewConstMetric(
 		c.energyConsumedDaily,
-		prometheus.CounterValue,
+		prometheus.GaugeValue,
 		float64(tracer.EnergyConsumedDaily),
 	)
 	ch <- prometheus.MustNewConstMetric(
 		c.energyConsumedMonthly,
-		prometheus.CounterValue,
+		prometheus.GaugeValue,
 		float64(tracer.EnergyConsumedMonthly),
 	)
 	ch <- prometheus.MustNewConstMetric(
 		c.energyConsumedAnnual,
-		prometheus.CounterValue,
+		prometheus.GaugeValue,
 		float64(tracer.EnergyConsumedAnnual),
 	)
 	ch <- prometheus.MustNewConstMetric(
 		c.energyConsumedTotal,
-		prometheus.CounterValue,
+		prometheus.GaugeValue,
 		float64(tracer.EnergyConsumedTotal),
 	)
 	// energy generated
 	ch <- prometheus.MustNewConstMetric(
 		c.energyGeneratedDaily,
-		prometheus.CounterValue,
+		prometheus.GaugeValue,
 		float64(tracer.EnergyGeneratedDaily),
 	)
 	ch <- prometheus.MustNewConstMetric(
 		c.energyGeneratedMonthly,
-		prometheus.CounterValue,
+		prometheus.GaugeValue,
 		float64(tracer.EnergyGeneratedMonthly),
 	)
 	ch <- prometheus.MustNewConstMetric(
 		c.energyGeneratedAnnual,
-		prometheus.CounterValue,
+		prometheus.GaugeValue,
 		float64(tracer.EnergyGeneratedAnnual),
 	)
 	ch <- prometheus.MustNewConstMetric(
 		c.energyGeneratedTotal,
-		prometheus.CounterValue,
+		prometheus.GaugeValue,
 		float64(tracer.EnergyGeneratedTotal),
 	)
 
